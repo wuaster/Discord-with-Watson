@@ -4,10 +4,10 @@ const dotenv = require('dotenv'); // This allows us to use the constants in our 
 dotenv.config(); // Read the constants in our .env file
 
 // Require the needed discord.js classes
-const { Client, Intents } = require('discord.js');
+const Discord = require('discord.js');
 
 // Create a new Discord client
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Discord.Client();
 
 const AssistantV2 = require('ibm-watson/assistant/v2'); // Add Watson Assistant
 const TextToSpeechV1 = require('ibm-watson/text-to-speech/v1'); // Add Text to Speech

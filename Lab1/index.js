@@ -22,9 +22,8 @@ const prefix = "*"
 
 // Whenever the client sees a new message in the chat, run the following code
 client.on('message', message => {
-    // If the message doesn't start with the prefix or the message is coming from another bot, we're not going to do anything
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
-    // Otherwise, we'll respond with 'Hello World!'
-    if (message.content === 'hello')
-        message.channel.send('Hello World!');
+    // We'll respond with 'Hello World!' if we see a *hello in the chat. 
+    // In programming adding 2 strings/words together looks like this: "hello" + "world" == "helloworld"
+    if (message.content === (prefix + 'hello'))
+        message.channel.send('Hello World!'); 
 });
